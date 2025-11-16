@@ -1,0 +1,11 @@
+# Binaries
+/parlabuhan
+/bin/
+/build/
+
+# OS
+.DS_Store
+.vscode/
+
+# Go
+vendor/
