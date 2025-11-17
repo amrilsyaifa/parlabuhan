@@ -22,8 +22,6 @@ Perfect for developers who want a simple container explorer with zero setup.
 
 ## 🖥️ Screenshot
 
-> Replace this with your actual screenshot
-
 ![Parlabuhan UI](image/parlabuhan.png)
 
 ---
@@ -35,4 +33,20 @@ docker run -d \
   -p 8080:8080 \
   -v /var/run/docker.sock:/var/run/docker.sock \
   amrilsyaifa/parlabuhan:latest
+```
+
+## 🐳 Run with Docker Compose
+
+Create a `docker-compose.yml` with Parlabuhan service:
+
+```yaml
+services:
+  parlabuhan:
+    image: amrilsyaifa/parlabuhan:latest
+    container_name: parlabuhan
+    ports:
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
 ```
